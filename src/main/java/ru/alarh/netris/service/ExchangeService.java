@@ -1,6 +1,6 @@
 package ru.alarh.netris.service;
 
-import org.springframework.http.ResponseEntity;
+import java.util.concurrent.CompletableFuture;
 
 import ru.alarh.netris.dto.DataDto;
 import ru.alarh.netris.dto.SourceDataDto;
@@ -8,12 +8,10 @@ import ru.alarh.netris.dto.TokenDataDto;
 
 public interface ExchangeService {
 	
-	ResponseEntity<DataDto[]> getData();
+	DataDto[] getData();
 	
-	ResponseEntity<SourceDataDto> getSourceData(String sourceUrl);
+	CompletableFuture<SourceDataDto> getSourceData(String sourceUrl);
 	
-	ResponseEntity<TokenDataDto> getTokenData(String tokenUrl);
-
-	
+	CompletableFuture<TokenDataDto> getTokenData(String tokenUrl);
 	
 }
