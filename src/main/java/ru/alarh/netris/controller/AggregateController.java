@@ -15,7 +15,7 @@ public class AggregateController {
 	
 	private final AggregateService aggregateService;
 	
-	@GetMapping(path = "/exchange")
+	@GetMapping(path = "/aggregate")
 	public ResponseEntity<?> exchange() {
 		try {
 			return ResponseEntity.ok(aggregateService.aggregate());
