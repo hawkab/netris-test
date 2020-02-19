@@ -1,5 +1,10 @@
 exchange:
   source: http://www.mocky.io/v2/5c51b9dd3400003252129fb5
 
+# пример с бОльшей задержкой
 #exchange:
 #  source: http://www.mocky.io/v2/5e4c554731000091c8d8bf03
+
+# пример с неверным типом камеры
+#exchange:
+#  source: http://www.mocky.io/v2/5e4d8cfa2d0000d9fbc0e097

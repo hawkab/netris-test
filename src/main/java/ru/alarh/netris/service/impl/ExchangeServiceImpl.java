@@ -29,6 +29,9 @@ public class ExchangeServiceImpl implements ExchangeService {
 	private final RestTemplate restClient;
 	private final HttpHeaders headers;
 
+	/**
+	 * Метод получения исходны данных
+	 */
 	@Override	
 	public DataDto[] getData() {
 		log.info("Получение исходных данных");
@@ -39,6 +42,9 @@ public class ExchangeServiceImpl implements ExchangeService {
 		return response.getBody();
 	}
 
+	/**
+	 * Метод получения данных по источникам
+	 */
 	@Async
 	@Override
 	public CompletableFuture<SourceDataDto> getSourceData(String sourceUrl) {
@@ -51,6 +57,9 @@ public class ExchangeServiceImpl implements ExchangeService {
 		return CompletableFuture.completedFuture(response.getBody());
 	}
 
+	/**
+	 * Метод получения данных по токенам
+	 */
 	@Async
 	@Override
 	public CompletableFuture<TokenDataDto> getTokenData(String tokenUrl) {
